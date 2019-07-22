@@ -1,0 +1,25 @@
+{
+  "name": "customer",
+  "connector": "rest",
+  "baseURL": "http://localhost:3001",
+  "crud": false,
+  "options": {
+    "headers": {
+      "accept": "application/json",
+      "content-type": "application/json"
+    }
+  },
+  "operations": [
+    {
+      "template": {
+        "method": "GET",
+        "url": "http://localhost:3001/customers/{customerId}"
+      },
+      "functions": {
+        "getById": [
+          "customerId"
+        ]
+      }
+    }
+  ]
+}
